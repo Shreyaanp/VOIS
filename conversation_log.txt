@@ -1,0 +1,21 @@
+2023-11-25 00:59:48,652 - User: Hello uh, can you tell me what you want?
+2023-11-25 01:00:02,075 - User: Yes, please.
+2023-11-25 01:00:02,825 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p***************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:00:26,527 - User: OK, now can you talk with me?
+2023-11-25 01:00:27,157 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p***************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
