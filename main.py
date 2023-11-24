@@ -12,7 +12,7 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000",  # Localhost for development
-    "https://vois-frontend.vercel.app"  # Your deployed frontend
+    "https://vois.shreyaan.work"  # Your deployed frontend
 ]
 
 app.add_middleware(
