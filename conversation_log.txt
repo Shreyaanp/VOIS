@@ -19,3 +19,463 @@
     }
 }
 
+2023-11-25 01:13:12,883 - User: Apple. Apple. Banana. Apple.
+2023-11-25 01:13:13,573 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:14:23,474 - User: Hello how may I help you?
+2023-11-25 01:14:24,017 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:14:59,826 - User: Hello, how are you?
+2023-11-25 01:15:00,287 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:15:13,582 - User: Can you tell me what your name is?
+2023-11-25 01:15:14,049 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:15:19,499 - User: OK, no worries.
+2023-11-25 01:15:19,925 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:15:25,423 - User: He will have.
+2023-11-25 01:15:26,047 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:15:36,150 - User: Can you tell me what interests?
+2023-11-25 01:15:36,631 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:28:08,082 - User: Hello.
+2023-11-25 01:28:08,937 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:28:32,115 - User: Beef.
+2023-11-25 01:28:32,785 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:30:29,264 - User: Virus by the.
+2023-11-25 01:30:30,523 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:30:35,701 - User: That show.
+2023-11-25 01:30:36,483 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:30:47,602 - User: Chali Chali.
+2023-11-25 01:30:48,207 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:35:01,570 - User: Hello, what are you doing?
+2023-11-25 01:35:02,118 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:35:06,456 - User: Hello. Hello.
+2023-11-25 01:35:06,924 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:35:11,659 - User: That's the guy, yeah.
+2023-11-25 01:35:12,254 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:35:18,213 - User: So can you tell me what your name is?
+2023-11-25 01:35:18,712 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:37:50,382 - User: Hello poop.
+2023-11-25 01:37:50,978 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:38:00,106 - User: Hello, can you tell me what is going on in the Amazon forest?
+2023-11-25 01:38:00,851 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:38:55,275 - User: Hello. Hi there. How are you doing today?
+2023-11-25 01:38:56,054 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:39:04,807 - User: OK, well you are experiencing some error.
+2023-11-25 01:39:05,924 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:41:53,937 - User: Can you tell me what is the capital of Peru?
+2023-11-25 01:41:54,505 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:42:43,374 - User: Hello, can you tell me what is going on in Peru?
+2023-11-25 01:42:43,984 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:42:57,829 - User: Hello. Can you tell me what's going on you girl?
+2023-11-25 01:42:58,383 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:43:07,992 - User: Why you are unforgettable problem with technical.
+2023-11-25 01:43:08,462 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:43:36,769 - User: React hope gives effect as a missing dependency. Initialize conversation either included or remove the dependency array or used wires. React hook exhaustive deps.
+2023-11-25 01:43:37,263 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:46:13,572 - User: Hello, can you tell me about the Paramatman brother?
+2023-11-25 01:46:14,253 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:46:21,332 - User: Hello, can you tell me about in Brazil?
+2023-11-25 01:46:21,905 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:47:32,517 - User: Hello can I assist you with anything that you required?
+2023-11-25 01:47:33,073 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:50:24,364 - User: Hello. My Mama. Mama. Mama.
+2023-11-25 01:50:24,948 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:50:39,974 - User: Hello. Hello. Hello.
+2023-11-25 01:50:40,468 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:51:26,396 - User: Hello. Hello.
+2023-11-25 01:51:26,872 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:51:42,357 - User: Hello. Hello. Hello.
+2023-11-25 01:51:43,029 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:52:05,541 - User: Hello. Hello.
+2023-11-25 01:52:06,005 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:52:37,622 - User: And.
+2023-11-25 01:52:38,069 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:52:45,756 - User: On the road.
+2023-11-25 01:52:46,399 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:53:08,019 - User: No, no, no, no, no.
+2023-11-25 01:53:08,452 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:53:19,194 - User: Can you tell me what your name is in the air?
+2023-11-25 01:53:19,830 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:53:27,415 - User: Dial.
+2023-11-25 01:53:27,996 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:53:51,403 - User: Ready to eat savoury from prior tennis balls for feedback on various right to indicating batch number and manufacturing date.
+2023-11-25 01:53:51,893 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:57:06,126 - User: Hello. Hello. Hello.
+2023-11-25 01:57:06,712 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 01:59:11,017 - User: Hero. Hero.
+2023-11-25 01:59:11,514 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 02:01:35,224 - User: Why?
+2023-11-25 02:01:36,180 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 02:02:34,896 - User: Hello. Hello. Hello.
+2023-11-25 02:02:35,714 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 02:02:53,187 - User: And so no issue.
+2023-11-25 02:02:53,716 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 02:06:10,379 - User: Hello, what are you doing right now?
+2023-11-25 02:06:10,866 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
+2023-11-25 02:09:50,737 - User: Hello what are you doing for the testing?
+2023-11-25 02:09:51,201 - API call failed with status code 401 and message: {
+    "error": {
+        "message": "Incorrect API key provided: sk-dv93p******************************************EHZF. You can find your API key at https://platform.openai.com/account/api-keys.",
+        "type": "invalid_request_error",
+        "param": null,
+        "code": "invalid_api_key"
+    }
+}
+
