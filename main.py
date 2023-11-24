@@ -28,6 +28,9 @@ bot = ConversationBot(initial_question, goal)
 
 class UserInput(BaseModel):
     user_message: str
+@app.get("/")
+async def root():
+    return {"message": "Hello World"}
 
 @app.get("/initialize/")
 async def initialize():
