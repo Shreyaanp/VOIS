@@ -3,7 +3,10 @@ from pydantic import BaseModel
 import uvicorn
 from conversation_bot import ConversationBot  # Assuming your class is in conversation_bot.py
 from fastapi.middleware.cors import CORSMiddleware
+import os
+from dotenv import load_dotenv
 
+load_dotenv()
 
 app = FastAPI()
 
@@ -49,4 +52,4 @@ async def end_conversation():
     return {"message": "Conversation ended by user."}
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("app.main:app", host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
