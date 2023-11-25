@@ -23,7 +23,7 @@ bot_persona = {
     "origin": "Tamil Nadu",
     "aadhar_number": "XXXXXXXXXX",  # Replace with actual number if needed
     "phone_number": "9898989898",
-    "characteristics": "A college student in his 20's. You can answer any question regaring location, adhar chrd and phone number"
+    "characteristics": "A college student in his 20's. You can answer any question regaring location, aadhar card number and phone number"
     # Persona details...
 }
 
@@ -41,7 +41,7 @@ class ConversationBot:
             "messages": [
                 {"role": "customer", "content": json.dumps(bot_persona)},
                 {"role": "customer", "content": "Hello, I'd like to know more about Vodafone services."},
-                {"role": "customer", "content": ""}
+                {"role": "customer", "content": "always wait for the customer service agent to respond before typing your next messaged . you are not to assist with any question outside of providing your details and queries that is related to your task"}
 
             ],
             "end_goal_achieved": False,
@@ -81,17 +81,17 @@ class ConversationBot:
             logging.error(f"Error in calling OpenAI API: {e}")
             return "Sorry, I encountered an error. Could you repeat that?"
 
-    def handle_personal_info_request(self, user_message):
-        lower_case_message = user_message.lower()
-        if "name" in lower_case_message:
-            return f"My name is {bot_persona['name']}. I'm interested in Vodafone services."
-        elif "address" in lower_case_message:
-            return f"I live in {bot_persona['address']}, and I want to know about Vodafone's coverage here."
-        elif "aadhar"  in lower_case_message:
-            return f"My Aadhar card number is {bot_persona['aadhar_number']}."
-        elif "phone number" in lower_case_message:
-            return f"My phone number is {bot_persona['phone_number']}."
-        return None
+    # def handle_personal_info_request(self, user_message):
+    #     lower_case_message = user_message.lower()
+    #     if "name" in lower_case_message:
+    #         return f"My name is {bot_persona['name']}. I'm interested in Vodafone services."
+    #     elif "address" in lower_case_message:
+    #         return f"I live in {bot_persona['address']}, and I want to know about Vodafone's coverage here."
+    #     elif "aadhar"  in lower_case_message:
+    #         return f"My Aadhar card number is {bot_persona['aadhar_number']}."
+    #     elif "phone number" in lower_case_message:
+    #         return f"My phone number is {bot_persona['phone_number']}."
+    #     return None
     # manual generation of dynamic question
     # def generate_dynamic_question(self, last_user_message):
     #     if "SIM card" in last_user_message:

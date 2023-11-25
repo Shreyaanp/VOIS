@@ -492,3 +492,8 @@
 2023-11-25 21:43:04,582 - User: Yes, please tell me what kind of service would you want?
 2023-11-25 21:43:15,001 - User: Yeah, tell me what do you want?
 2023-11-25 21:43:45,512 - User: Yes Sir, Please tell me what kind of service do you want?
+2023-11-25 21:45:11,012 - User: Hello welcome to Vodafone service center Can what can I help you with today?
+2023-11-25 21:45:23,626 - User: OK. Can you tell me what kind of service would you want?
+2023-11-25 21:47:29,565 - User: Hello welcome to Vodafone service center. How may I help you?
+2023-11-25 21:49:00,828 - User: Hello welcome to Vodafone service Center. How may I help you today?
+2023-11-25 21:49:14,818 - User: Sure. What type of photophone service are you wanting to take?
