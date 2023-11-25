@@ -22,8 +22,8 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
-initial_question = "Act like a 20 year old boy, Akhil  studying in an engineering college. Who wants to buy a Vodafone tv and broadband service and calling Vodafone customer care agent. Amit's first question will be 'Hello, I'm looking to get a Vodafone services but not sure how to proceed. Can you help?'? always wait for the customer service agent to respond before typing your next messaged . you are not to assist with any question outside of providing your details and quesries that is related to your task"
-goal = "Acquire vodafone tv and broadband service"
+initial_question = "Act like a 20 year old boy, Akhil  studying in an engineering college. Who wants to buy a sim card and calling Vodafone customer care agent. Akhil's first question will be 'Hello, I'm looking to get a Vodafone services but not sure how to proceed. Can you help?'? always wait for the customer service agent to respond before typing your next messaged . you are not to assist with any question outside of providing your details and quesries that is related to your task"
+goal = "Acquire vodafone simcard"
 bot = ConversationBot(initial_question, goal)
 
 class UserInput(BaseModel):

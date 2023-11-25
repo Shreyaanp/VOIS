@@ -18,14 +18,13 @@ openai.api_key = os.getenv('OPENAI_API_KEY')
 
 # Define bot persona
 bot_persona = {
-    "funtion": "Customer",
-    "age": "20",
     "name": "Akhil Chintalapati",
     "address": "Vashi, Mumbai",
     "origin": "Tamil Nadu",
     "aadhar_number": "XXXXXXXXXX",  # Replace with actual number if needed
     "phone_number": "9898989898",
-    "characteristics": "A college student in his 20's. You can answer any question regarding location, aadhar card and phone number"
+    "characteristics": "A college student in his 20's. You can answer any question regaring location, adhar chrd and phone number"
+    # Persona details...
 }
 
 # Configure logging
@@ -40,9 +39,9 @@ class ConversationBot:
         self.goal = goal.lower()
         self.conversation_state = {
             "messages": [
-                {"role": "system", "content": json.dumps(bot_persona)},
-                {"role": "system", "content": "Hello, I'd like to know more about Vodafone services."},
-                {"role": "system", "content": ""}
+                {"role": "customer", "content": json.dumps(bot_persona)},
+                {"role": "customer", "content": "Hello, I'd like to know more about Vodafone services."},
+                {"role": "customer", "content": ""}
 
             ],
             "end_goal_achieved": False,
@@ -103,7 +102,7 @@ class ConversationBot:
     #         return "Can you provide more details about Vodafone services?"
 
     def update_conversation_state(self, role, message):
-        # Keep the role as 'system', don't change it to 'system'
+        # Keep the role as 'customer', don't change it to 'customer'
         formatted_message = f"{role.title()}: {message}"
         self.conversation_state["messages"].append({"role": role, "content": message})
         log_in_background(formatted_message)
@@ -135,13 +134,13 @@ class ConversationBot:
             personal_info_response = self.handle_personal_info_request(user_input)
             if personal_info_response:
                 print("Akhil:", personal_info_response)
-                self.update_conversation_state("system", personal_info_response)
+                self.update_conversation_state("customer", personal_info_response)
                 continue
 
             last_user_message = self.conversation_state["messages"][-1]["content"]
             dynamic_response = self.generate_dynamic_question(last_user_message)
             print("Akhil:", dynamic_response)
-            self.update_conversation_state("system", dynamic_response)
+            self.update_conversation_state("customer", dynamic_response)
 
     def generate_response(self, last_user_message):
         # Loop until a valid, in-character response is generated
@@ -151,7 +150,7 @@ class ConversationBot:
                 return dynamic_response
             else:
                 # Modify last_user_message or add context to steer the conversation
-                last_user_message = "As a system, I'm wondering, " + last_user_message
+                last_user_message = "As a customer, I'm wondering, " + last_user_message
     def handle_personal_info_request(self, user_message):
         lower_case_message = user_message.lower()
         if "name" in lower_case_message:
@@ -219,7 +218,7 @@ class ConversationBot:
 
 
     def update_conversation_state(self, role, message):
-        # Keep the role as 'system', don't change it to 'system'
+        # Keep the role as 'customer', don't change it to 'customer'
         formatted_message = f"{role.title()}: {message}"
         self.conversation_state["messages"].append({"role": role, "content": message})
         log_in_background(formatted_message)
@@ -248,20 +247,20 @@ class ConversationBot:
 def run(self):
         initial_bot_message = f"Akhil: {self.initial_question}"
         print(initial_bot_message)
-        self.update_conversation_state("system", json.dumps(bot_persona))
-        self.update_conversation_state("system", self.initial_question)
+        self.update_conversation_state("customer", json.dumps(bot_persona))
+        self.update_conversation_state("customer", self.initial_question)
 
         while not self.is_end_goal_achieved():
             user_input = input("User: ")
-            self.update_conversation_state("system", user_input)
+            self.update_conversation_state("customer", user_input)
 
             personal_info_response = self.handle_personal_info_request(user_input)
             if personal_info_response and self.is_response_in_character(personal_info_response):
                 print("Akhil:", personal_info_response)
-                self.update_conversation_state("system", personal_info_response)
+                self.update_conversation_state("customer", personal_info_response)
                 continue
 
             last_user_message = self.conversation_state["messages"][-1]["content"]
             in_character_response = self.generate_response(last_user_message)
             print("Akhil:", in_character_response)
-            self.update_conversation_state("system", in_character_response)
+            self.update_conversation_state("customer", in_character_response)

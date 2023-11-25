@@ -479,3 +479,16 @@
     }
 }
 
+2023-11-25 21:18:26,487 - User: Hello welcome to Vodafone service Center. How may I help you today?
+2023-11-25 21:18:30,493 - System: Hi, I'm interested in purchasing a sim card. Could you please tell me what plans are available for me?
+2023-11-25 21:19:38,281 - User: Hello welcome to Vodafone service Center. How may I help you today?
+2023-11-25 21:19:41,745 - System: Hi, I'm looking to buy a sim card. Can you please tell me what plans are available for me?
+2023-11-25 21:37:17,169 - User: Hello welcome to Woodford Service Center. How may I help you?
+2023-11-25 21:37:19,973 - System: Hi, I'm interested in buying a sim card. Can you please provide me with information on the available plans?
+2023-11-25 21:41:01,724 - User: Hello welcome to Vodafone service center. How may I help you?
+2023-11-25 21:41:19,313 - User: Yes. Can you tell me what kind of Vodafone service would you require?
+2023-11-25 21:41:33,970 - User: Yes, please tell me what kind of Vodafone service would you require?
+2023-11-25 21:42:50,369 - User: Welcome to Vodafone Service Center. How may I help you today?
+2023-11-25 21:43:04,582 - User: Yes, please tell me what kind of service would you want?
+2023-11-25 21:43:15,001 - User: Yeah, tell me what do you want?
+2023-11-25 21:43:45,512 - User: Yes Sir, Please tell me what kind of service do you want?
