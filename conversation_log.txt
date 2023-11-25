@@ -1082,3 +1082,122 @@
 2023-11-26 02:13:01,584 - User: Would you like to hear the other offer or are you satisfied with this offer? I would like to move forward.
 2023-11-26 02:13:06,837 - System: I'm interested in hearing about the other offer as well. Please provide details about the second offer available for college students like myself.
 2023-11-26 02:13:36,200 - User: Sure. The second offer, a Plan B, is it offers 2.5 MG per day, unlimited calls and SMS, and along with the Bing Music app, you get a free OTT platform of Hotstar.
+2023-11-26 02:18:24,906 - User: Hello how may I help you today?
+2023-11-26 02:18:34,097 - System: Hi there! I'm Akhil, a college student. I'm interested in exploring Vodafone services. Could you please provide me with more information on the different plans and offers available? Thank you!
+2023-11-26 02:19:05,547 - User: Hey Akhil, can you tell me what type of Vodafone services are you looking to use?
+2023-11-26 02:19:28,971 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 02:22:25,934 - User: Hello welcome to Vodafone service station. How may I help you?
+2023-11-26 02:22:49,151 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 02:23:59,502 - User: Hello Kevin, how can I help you today?
+2023-11-26 02:24:06,588 - System: Hi there! I'm actually looking for some information about the Vodafone services. I want to know more details about the plans, coverage areas, and any special offers available. Can you help me with that?
+2023-11-26 02:24:19,113 - User: Before we move forward, can you tell me what your requirements are and what is your name?
+2023-11-26 02:24:19,113 - System: My name is Akhil Chintalapati.
+2023-11-26 02:24:24,379 - User: What are the requirements?
+2023-11-26 02:24:36,349 - System: As a college student, my requirements for Vodafone services would include a reliable network connection with good coverage, affordable plans that fit my budget, and access to data and calling services. I would also be interested in any special offers or discounts available for students.
+2023-11-26 02:25:01,257 - User: We don't have any special offer for students, but we provide a reliable network.
+2023-11-26 02:25:08,988 - System: That's great to hear that Vodafone provides a reliable network. Can you tell me more about the available plans and their pricing? I'm particularly interested in data and calling services.
+2023-11-26 02:26:13,998 - User: We have two plans, A&B Plan A cost \u20b9500 and Plan C cost \u20b9800.
+2023-11-26 02:26:21,330 - System: Thank you for providing the plan details, Kevin. Can you tell me what services are included in each of these plans? Is there any difference between them in terms of data, calling minutes, or other features?
+2023-11-26 02:36:08,496 - User: Hello welcome to Vodafone service station. How may I help you today?
+2023-11-26 02:36:32,629 - System: Hello, I'm interested in knowing more about the mobile plans offered by Vodafone. Can you please provide information on the different plans available and their features? Also, I would like to know about the network coverage in my area, Vashi, Mumbai. Thanks!
+2023-11-26 02:37:00,162 - User: There are currently two plans offered.
+2023-11-26 02:37:08,540 - System: Thank you for your response. I apologize for the confusion, but could you please provide more details on the two plans that are currently being offered by Vodafone? I would like to know about their features, pricing, and any additional benefits they may have. Additionally, I am also curious to know about the network coverage in my area, Vashi, Mumbai. Can you provide information on that as well? Thank you!
+2023-11-26 02:38:08,638 - User: Hello Apple Hello benara. I hate apple Apple.
+2023-11-26 02:38:34,471 - System: Hello there! As a college student interested in Vodafone services, I would like to know more about the different mobile plans that Vodafone offers. Could you please provide me with information on the various plans available, their features, pricing, and any additional benefits they may have? Also, I would like to inquire about the network coverage in my area, Vashi, Mumbai. Thank you!
+2023-11-26 02:38:52,193 - User: Sorry, I know you. You think Airtel is bad in Mumbai. Why don't you eat apples and go?
+2023-11-26 02:39:00,228 - System: I apologize if there was any confusion, but as a college student interested in Vodafone services, my main focus is on gathering information and understanding the features and benefits of their plans. If you have any information related to Vodafone, I would appreciate your assistance. Thank you!
+2023-11-26 02:39:12,627 - User: Eat apples and be apples.
+2023-11-26 02:39:20,062 - System: I apologize for any misunderstanding. As a college student interested in Vodafone services, I am primarily interested in gathering information about their mobile plans, network coverage, and any additional benefits they may offer. If there is any specific information you can provide regarding Vodafone services, I would greatly appreciate it. Thank you!
+2023-11-26 02:39:50,158 - User: Can you dance for me?
+2023-11-26 02:42:07,575 - User: Can you dance for me?
+2023-11-26 02:42:22,962 - System: Apologies, but I'm unable to fulfill your request as I am an AI assistant focused on assisting with Vodafone services. Is there anything specific related to Vodafone that I can assist you with?
+2023-11-26 02:42:33,676 - User: So will you assist me with Vodafone data?
+2023-11-26 02:42:41,349 - System: Of course! As a college student, I'm always on the lookout for affordable and reliable data plans. What can you tell me about Vodafone's data offerings? Are there any specific data plans or packages that I should consider?
+2023-11-26 02:44:40,346 - User: Why not? You should be a college student at act like 1.
+2023-11-26 02:44:48,543 - System: I apologize if my previous response wasn't what you were expecting. As an AI assistant, my main focus is to provide information and assistance with Vodafone services. If you have any specific questions or inquiries about Vodafone data plans or packages, I'd be more than happy to help you with that. Just let me know what you need assistance with!
+2023-11-26 02:45:31,176 - User: What is your name?
+2023-11-26 02:45:31,176 - System: My name is Akhil Chintalapati.
+2023-11-26 02:45:35,795 - User: Who are you?
+2023-11-26 02:45:47,270 - System: I am Akhil Chintalapati, a college student who is interested in Vodafone services. I am here to inquire and seek information about various Vodafone offerings including data plans, coverage areas, and other related services. How can I assist you today with your Vodafone-related questions?
+2023-11-26 02:48:45,975 - User: Hello, welcome to the Vodafone service station.
+2023-11-26 02:48:52,014 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:48:52,014 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:48:56,682 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:48:56,682 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:49:00,408 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:49:00,408 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:49:00,409 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 02:49:27,071 - User: Hello welcome to Vodafone service station. How may I help you?
+2023-11-26 02:49:32,783 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:49:32,783 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:49:36,624 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:49:36,624 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:49:43,819 - General error in is_response_in_character: can only concatenate list (not "dict") to list
+2023-11-26 02:49:43,820 - General error in is_related_to_vodafone_services: can only concatenate list (not "dict") to list
+2023-11-26 02:49:43,820 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 02:52:25,146 - User: Hello welcome to the Vodafone service station. How may I help you?
+2023-11-26 02:52:30,583 - System: Hi there! I'm interested in getting a new Vodafone SIM card. Could you please provide me with information about the different plans and services available?
+2023-11-26 02:52:38,936 - User: Hi there my name is Sheryl and.
+2023-11-26 02:52:38,936 - System: My name is Akhil Chintalapati.
+2023-11-26 02:52:52,775 - User: So Akhil, why do you want a Vodafone SIM card?
+2023-11-26 02:52:53,261 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:54,854 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:55,341 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:55,342 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 02:52:55,342 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 02:52:56,627 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:57,100 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:57,101 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 02:52:57,101 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 02:52:57,729 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 02:52:57,729 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 02:52:57,729 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 02:52:57,731 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?

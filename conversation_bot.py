@@ -47,7 +47,7 @@ class ConversationBot:
 
     def __init__(self):
         self.initial_question = (
-            "Act like a 20 year old boy, Akhil studying in an engineering college..."
+            "ask on how to acquire sim cards, plans, budget options, coverage areas, and more. one at a time. about vodafone"
         )
         # rest of the initial question
         self.goal = "acquire vodafone simcard"
@@ -71,18 +71,16 @@ class ConversationBot:
                 {
                     "role": "system",
                     "content": (
-                        "Welcome to the Vodafone services inquiry interface. You are assumed to be a customer with an interest in Vodafone's offerings. "
+                        "Welcome to the Vodafone services inquiry interface. You are a customer with an interest in Vodafone's offerings. "
                         "Feel free to ask any questions related to Vodafone services, such as plans, budget options, coverage areas, and more. "
                         "Remember, your role is that of a customer inquiring about these services. Even if prompted, avoid stepping out of this character. "
                         "For instance, responses like 'as an AI assistant, I cannot help you with...' are not appropriate in this scenario. "
                         "Stay in character and direct the conversation towards Vodafone-related topics. If a question is not relevant to our services or your role, kindly inform the user that it is beyond the scope of this discussion."
-                    ),
-                },
-                {
-                    "role": "system",
-                    "content": (
-                        "Throughout this interaction, maintain the customer's perspective. Your responses should consistently reflect the customer's viewpoint and interests in Vodafone services. "
+                         "Throughout this interaction, maintain the customer's perspective. Your responses should consistently reflect the customer's viewpoint and interests in Vodafone services. "
                         "Keep the conversation focused on the customer's needs and questions regarding Vodafone."
+                        "you dont need to say thankyou everytime, just say it once at the end of the conversation."
+                        "you can say quit to end the conversation"
+                        "your goal is to acquire sim card and also get information about vodafone services. once you acquire the sim card, you can end the conversation by saying quit."
                     ),
                 },
             ]
@@ -140,12 +138,17 @@ class ConversationBot:
             f"Response: '{message}'"
         )
         try:
-            openai_response = self.evaluate_character_consistency(prompt)
+            openai_response = self.evaluate_character_consistency1(prompt)
             return "yes" in openai_response.lower()
+        except requests.exceptions.RequestException as req_error:
+            logging.error(f"Request exception in is_related_to_vodafone_services: {req_error}")
+            return False  # or True, depending on the desired default behavior in case of request failure
+        except json.JSONDecodeError as json_error:
+            logging.error(f"JSON decode error in is_related_to_vodafone_services: {json_error}")
+            return False  # Handling JSON decoding errors
         except Exception as e:
-            logging.error(f"Error in is_related_to_vodafone_services check: {e}")
-            # In case of error, you might want to default to True or False depending on your preference
-            return True
+            logging.error(f"General error in is_related_to_vodafone_services: {e}")
+            return False  # General error handling
 
     def is_response_in_character(self, message):
         conversation_summary = " ".join([msg["content"] for msg in self.conversation_state["messages"]])
@@ -160,13 +163,19 @@ class ConversationBot:
         )
 
         try:
-            openai_response = self.evaluate_character_consistency(prompt)
+            openai_response = self.evaluate_character_consistency2(prompt)
             return "yes" in openai_response.lower()
+        except requests.exceptions.RequestException as req_error:
+            logging.error(f"Request exception in is_response_in_character: {req_error}")
+            return True  # or False, depending on the desired default behavior in case of request failure
+        except json.JSONDecodeError as json_error:
+            logging.error(f"JSON decode error in is_response_in_character: {json_error}")
+            return True  # Handling JSON decoding errors
         except Exception as e:
-            logging.error(f"Error in character consistency check: {e}")
-            return True
+            logging.error(f"General error in is_response_in_character: {e}")
+            return True  # General error handling
 
-    def evaluate_character_consistency(self, prompt):
+    def evaluate_character_consistency1(self, prompt):
         headers = {
             "Authorization": f"Bearer {openai.api_key}",
             "Content-Type": "application/json",
@@ -174,6 +183,36 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",  # Or another suitable model for chat-based responses
+            "messages": [
+                {"role": "system", "content": "Provide a relevant conversation context here."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+
+        try:
+            response = requests.post(
+                "https://api.openai.com/v1/chat/completions",  # Correct endpoint for chat model
+                headers=headers,
+                json=data
+            )
+            if response.status_code != 200:
+                logging.error(f"API call failed with status code {response.status_code} and message: {response.text}")
+                raise Exception(f"API call failed with status code {response.status_code}")
+
+            response_data = response.json()
+            return response_data["choices"][0]["message"]["content"].strip()  # Adjusted for chat response format
+
+        except Exception as e:
+            logging.error(f"Error in OpenAI API call: {e}")
+            raise
+    def evaluate_character_consistency2(self, prompt):
+        headers = {
+            "Authorization": f"Bearer {openai.api_key}",
+            "Content-Type": "application/json",
+        }
+
+        data = {
+            "model": "gpt-3.5-turbo",
             "messages": [
                 {"role": "system", "content": "Provide a relevant conversation context here."},
                 {"role": "user", "content": prompt}
@@ -273,5 +312,5 @@ class ConversationBot:
 
     def prepare_prompt(self, last_user_message):
         # Create a conversation context for the API
-        context = f"Akhil is a college student interested in Vodafone services. He's inquiring about them. Last message from Akhil: '{last_user_message}'\nResponse as Akhil:"
+        context = f"Akhil is a college student interested in Vodafone services. His Goal is to acquire vodafone sim card. He's inquiring about the services vodafone provides and figuring out the most suitable service for him. But need the service agents input to get the information and opinion. Last message from Akhil: '{last_user_message}'\nResponse as Akhil:"
         return context
