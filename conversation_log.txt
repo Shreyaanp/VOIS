@@ -497,3 +497,10 @@
 2023-11-25 21:47:29,565 - User: Hello welcome to Vodafone service center. How may I help you?
 2023-11-25 21:49:00,828 - User: Hello welcome to Vodafone service Center. How may I help you today?
 2023-11-25 21:49:14,818 - User: Sure. What type of photophone service are you wanting to take?
+2023-11-25 23:07:32,996 - User: Hello welcome to Vodafone service station. How may I help you today?
+2023-11-25 23:07:51,166 - User: OK, you have queries related to budget plans and offer available for prepaid users.
+2023-11-25 23:11:47,505 - User: Hello my name is Ryan and welcome to Vodafone Service Center.
+2023-11-25 23:12:09,604 - User: Hello, you're speaking to Shriyan. Welcome to Vodafone Service Center. How may I help you?
+2023-11-25 23:12:23,499 - User: Hello.
+2023-11-25 23:12:32,481 - User: Hello welcome to Vodafone service Center. How may I help you today?
+2023-11-25 23:12:45,740 - User: Hello.

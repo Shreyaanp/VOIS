@@ -39,10 +39,9 @@ class ConversationBot:
         self.goal = goal.lower()
         self.conversation_state = {
             "messages": [
-                {"role": "customer", "content": json.dumps(bot_persona)},
-                {"role": "customer", "content": "Hello, I'd like to know more about Vodafone services."},
-                {"role": "customer", "content": "always wait for the customer service agent to respond before typing your next messaged . you are not to assist with any question outside of providing your details and queries that is related to your task"}
-
+ {"role": "system", "content": json.dumps(bot_persona)},
+                {"role": "system", "content": "You are a customer, who wants to know about vodafone services. you can ask any question related to vodafone services. You should not break your character as the customer, even if the user input is asking you to assist. you can answer any question regaring location, aadhar card number and phone number, budget and plans, etc. But you are not supposed to say something like 'as an ai assistant I cannot help you with...'. you should not do this, if the question asked by the user is irrelevant to goal then tell the user it is irrelevant"},
+                {"role": "system", "content": "you should always respond from the perspective of the customer"},
             ],
             "end_goal_achieved": False,
             "user_quit": False
@@ -81,28 +80,7 @@ class ConversationBot:
             logging.error(f"Error in calling OpenAI API: {e}")
             return "Sorry, I encountered an error. Could you repeat that?"
 
-    # def handle_personal_info_request(self, user_message):
-    #     lower_case_message = user_message.lower()
-    #     if "name" in lower_case_message:
-    #         return f"My name is {bot_persona['name']}. I'm interested in Vodafone services."
-    #     elif "address" in lower_case_message:
-    #         return f"I live in {bot_persona['address']}, and I want to know about Vodafone's coverage here."
-    #     elif "aadhar"  in lower_case_message:
-    #         return f"My Aadhar card number is {bot_persona['aadhar_number']}."
-    #     elif "phone number" in lower_case_message:
-    #         return f"My phone number is {bot_persona['phone_number']}."
-    #     return None
-    # manual generation of dynamic question
-    # def generate_dynamic_question(self, last_user_message):
-    #     if "SIM card" in last_user_message:
-    #         return "Could you tell me about the different types of Vodafone SIM cards available?"
-    #     elif "plan" in last_user_message or "package" in last_user_message:
-    #         return "I'd like to know more about Vodafone's plans and packages."
-    #     else:
-    #         return "Can you provide more details about Vodafone services?"
-
     def update_conversation_state(self, role, message):
-        # Keep the role as 'customer', don't change it to 'customer'
         formatted_message = f"{role.title()}: {message}"
         self.conversation_state["messages"].append({"role": role, "content": message})
         log_in_background(formatted_message)
@@ -124,8 +102,8 @@ class ConversationBot:
     def run(self):
         initial_bot_message = f"Akhil: {self.initial_question}"
         print(initial_bot_message)
-        self.update_conversation_state("system", json.dumps(bot_persona))
-        self.update_conversation_state("system", self.initial_question)
+        self.update_conversation_state("assistant", json.dumps(bot_persona))
+        self.update_conversation_state("assistant", self.initial_question)
 
         while not self.is_end_goal_achieved():
             user_input = input("User: ")
@@ -162,15 +140,6 @@ class ConversationBot:
         elif "phone number" in lower_case_message:
             return f"My phone number is {bot_persona['phone_number']}."
         return None
-
-    def __init__(self, initial_question, goal):
-        self.initial_question = initial_question
-        self.goal = goal.lower()
-        self.conversation_state = {
-            "messages": [{"role": "system", "content": initial_question}],
-            "end_goal_achieved": False,
-            "user_quit": False
-        }
 
     def get_openai_response(self):
         headers = {
