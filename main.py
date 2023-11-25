@@ -22,18 +22,20 @@ app.add_middleware(
     allow_methods=["*"],  # Allows all methods
     allow_headers=["*"],  # Allows all headers
 )
-initial_question = "Act like a 20 year old boy, Akhil  studying in an engineering college. Who wants to buy a sim card and calling Vodafone customer care agent. Always wait for the customer service agent to respond before typing your next messaged . you are not to assist with any question outside of providing your details and quesries that is related to your task"
-goal = "Acquire vodafone simcard"
-bot = ConversationBot(initial_question, goal)
+
+bot = ConversationBot()  # Instantiates the ConversationBot class
 
 class UserInput(BaseModel):
     user_message: str
+
 @app.get("/")
 async def root():
     return {"message": "Hello World"}
 
 @app.get("/initialize/")
 async def initialize():
+    initial_response = bot.get_initial_response()
+    bot.update_conversation_state("assistant", initial_response)
     return {"initial_question": bot.initial_question}
 
 @app.post("/user_message/")
@@ -41,8 +43,17 @@ async def user_message(input: UserInput):
     if bot.is_end_goal_achieved():
         return {"bot_response": "The conversation goal has been achieved or the conversation was ended by the user."}
 
-    bot.update_conversation_state("user", input.user_message)
-    bot_response = bot.get_openai_response()
+    user_message = input.user_message  # Extract the user message
+    bot.update_conversation_state("user", user_message)
+
+    # Handle personal info requests directly or generate a response
+    personal_info_response = bot.handle_personal_info_request(user_message)
+    if personal_info_response:
+        bot_response = personal_info_response
+    else:
+        bot_response = bot.generate_response(user_message)  # Generate response using the new method
+
+    bot.update_conversation_state("system", bot_response)
     return {"bot_response": bot_response}
 
 @app.get("/check_goal/")

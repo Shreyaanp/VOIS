@@ -13,7 +13,7 @@ import os
 load_dotenv()
 
 # Use the environment variable
-openai.api_key = os.getenv('OPENAI_API_KEY')
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 
 # Define bot persona
@@ -28,40 +28,78 @@ bot_persona = {
 }
 
 # Configure logging
-logging.basicConfig(filename='conversation_log.txt', level=logging.INFO, format='%(asctime)s - %(message)s')
+logging.basicConfig(
+    filename="conversation_log.txt",
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+)
+
 
 def log_in_background(message):
     threading.Thread(target=logging.info, args=(message,)).start()
 
+
 class ConversationBot:
-    def __init__(self, initial_question, goal):
-        self.initial_question = initial_question
-        self.goal = goal.lower()
+    def get_initial_response(self):
+        # Generate the initial response based on the initial question
+        initial_response = self.get_openai_response(self.initial_question)
+        return initial_response
+
+    def __init__(self):
+        self.initial_question = (
+            "Act like a 20 year old boy, Akhil studying in an engineering college..."
+        )
+        # rest of the initial question
+        self.goal = "acquire vodafone simcard"
+
         self.conversation_state = {
-            "messages": [
- {"role": "system", "content": json.dumps(bot_persona)},
-                {"role": "system", "content": "You are a customer, who wants to know about vodafone services. you can ask any question related to vodafone services. You should not break your character as the customer, even if the user input is asking you to assist. you can answer any question regaring location, aadhar card number and phone number, budget and plans, etc. But you are not supposed to say something like 'as an ai assistant I cannot help you with...'. you should not do this, if the question asked by the user is irrelevant to goal then tell the user it is irrelevant"},
-                {"role": "system", "content": "you should always respond from the perspective of the customer"},
-            ],
+            "messages": [],
             "end_goal_achieved": False,
-            "user_quit": False
+            "user_quit": False,
         }
 
-    def get_openai_response(self):
+    def get_openai_response(self, message):
         headers = {
             "Authorization": f"Bearer {openai.api_key}",
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         }
 
         data = {
             "model": "gpt-3.5-turbo",
-            "messages": self.conversation_state["messages"]
+            "messages": [
+                {"role": "system", "content": json.dumps(bot_persona)},
+                {
+                    "role": "system",
+                    "content": (
+                        "Welcome to the Vodafone services inquiry interface. You are assumed to be a customer with an interest in Vodafone's offerings. "
+                        "Feel free to ask any questions related to Vodafone services, such as plans, budget options, coverage areas, and more. "
+                        "Remember, your role is that of a customer inquiring about these services. Even if prompted, avoid stepping out of this character. "
+                        "For instance, responses like 'as an AI assistant, I cannot help you with...' are not appropriate in this scenario. "
+                        "Stay in character and direct the conversation towards Vodafone-related topics. If a question is not relevant to our services or your role, kindly inform the user that it is beyond the scope of this discussion."
+                    ),
+                },
+                {
+                    "role": "system",
+                    "content": (
+                        "Throughout this interaction, maintain the customer's perspective. Your responses should consistently reflect the customer's viewpoint and interests in Vodafone services. "
+                        "Keep the conversation focused on the customer's needs and questions regarding Vodafone."
+                    ),
+                },
+            ]
+            + self.conversation_state["messages"]
+            + [{"role": "user", "content": message}],
         }
 
         try:
-            response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(data))
+            response = requests.post(
+                "https://api.openai.com/v1/chat/completions",
+                headers=headers,
+                data=json.dumps(data),
+            )
             if response.status_code != 200:
-                logging.error(f"API call failed with status code {response.status_code} and message: {response.text}")
+                logging.error(
+                    f"API call failed with status code {response.status_code} and message: {response.text}"
+                )
                 return "Sorry, I encountered an error with the API call."
 
             response_data = response.json()
@@ -91,13 +129,74 @@ class ConversationBot:
             self.conversation_state["user_quit"] = True
 
     def is_related_to_vodafone_services(self, message):
-            return "vodafone" in message.lower()
+    # Create a summary of the conversation history
+        conversation_summary = " ".join([msg["content"] for msg in self.conversation_state["messages"]])
+
+        # Formulate the prompt with conversation context
+        prompt = (
+            f"Conversation so far: {conversation_summary}\n"
+            f"Question: Considering the conversation is about Vodafone services and Akhil's interests as a customer, is the following response relevant to the topic? "
+            f"please answer me in yes or no, no need to give explanation."
+            f"Response: '{message}'"
+        )
+        try:
+            openai_response = self.evaluate_character_consistency(prompt)
+            return "yes" in openai_response.lower()
+        except Exception as e:
+            logging.error(f"Error in is_related_to_vodafone_services check: {e}")
+            # In case of error, you might want to default to True or False depending on your preference
+            return True
+
     def is_response_in_character(self, message):
-        # Add more robust checks here
-        if "I can help you" in message or "I can assist you" in message:
-            return False  # This sounds like an assistant's response
-        # Add more checks as necessary
-        return True
+        conversation_summary = " ".join([msg["content"] for msg in self.conversation_state["messages"]])
+
+        # Formulate the prompt with conversation context
+        prompt = (
+            f"Conversation so far: {conversation_summary}\n"
+            f"Question: Given that Akhil is a 20-year-old college student interested in Vodafone services, does the following response align with his character and interests? "
+            f"Keep in mind that Akhil should not provide responses that sound like they're from a Vodafone employee or an AI assistant. "
+            f"please answer me in yes or no, no need to give explanation."
+            f"Response: '{message}'"
+        )
+
+        try:
+            openai_response = self.evaluate_character_consistency(prompt)
+            return "yes" in openai_response.lower()
+        except Exception as e:
+            logging.error(f"Error in character consistency check: {e}")
+            return True
+
+    def evaluate_character_consistency(self, prompt):
+        headers = {
+            "Authorization": f"Bearer {openai.api_key}",
+            "Content-Type": "application/json",
+        }
+
+        data = {
+            "model": "gpt-3.5-turbo",  # Or another suitable model for chat-based responses
+            "messages": [
+                {"role": "system", "content": "Provide a relevant conversation context here."},
+                {"role": "user", "content": prompt}
+            ]
+        }
+
+        try:
+            response = requests.post(
+                "https://api.openai.com/v1/chat/completions",  # Correct endpoint for chat model
+                headers=headers,
+                json=data
+            )
+            if response.status_code != 200:
+                logging.error(f"API call failed with status code {response.status_code} and message: {response.text}")
+                raise Exception(f"API call failed with status code {response.status_code}")
+
+            response_data = response.json()
+            return response_data["choices"][0]["message"]["content"].strip()  # Adjusted for chat response format
+
+        except Exception as e:
+            logging.error(f"Error in OpenAI API call: {e}")
+            raise
+
 
     def run(self):
         initial_bot_message = f"Akhil: {self.initial_question}"
@@ -112,23 +211,33 @@ class ConversationBot:
             personal_info_response = self.handle_personal_info_request(user_input)
             if personal_info_response:
                 print("Akhil:", personal_info_response)
-                self.update_conversation_state("customer", personal_info_response)
+                self.update_conversation_state("system", personal_info_response)
                 continue
 
             last_user_message = self.conversation_state["messages"][-1]["content"]
-            dynamic_response = self.generate_dynamic_question(last_user_message)
-            print("Akhil:", dynamic_response)
-            self.update_conversation_state("customer", dynamic_response)
-
+            in_character_response = self.generate_response(last_user_message)
+            if not self.is_related_to_vodafone_services(in_character_response):
+                in_character_response = "I'm sorry, I don't know the answer to that."
+            self.update_conversation_state("system", in_character_response)
     def generate_response(self, last_user_message):
-        # Loop until a valid, in-character response is generated
-        while True:
+        attempt_count = 0
+        max_attempts = 3  # Limit the number of attempts to prevent infinite loops
+
+        while attempt_count < max_attempts:
             dynamic_response = self.generate_dynamic_question(last_user_message)
-            if self.is_response_in_character(dynamic_response):
+
+            # Check if the response is in character and related to Vodafone services
+            if self.is_response_in_character(dynamic_response) and self.is_related_to_vodafone_services(dynamic_response):
                 return dynamic_response
             else:
-                # Modify last_user_message or add context to steer the conversation
-                last_user_message = "As a customer, I'm wondering, " + last_user_message
+                # Modify the message or add context to steer the conversation back
+                last_user_message = "Please keep the response relevant to Vodafone services and the customer's perspective."
+                attempt_count += 1
+
+        # Fallback response if a suitable response isn't generated
+        return "I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?"
+
+
     def handle_personal_info_request(self, user_message):
         lower_case_message = user_message.lower()
         if "name" in lower_case_message:
@@ -141,62 +250,18 @@ class ConversationBot:
             return f"My phone number is {bot_persona['phone_number']}."
         return None
 
-    def get_openai_response(self):
-        headers = {
-            "Authorization": f"Bearer {openai.api_key}",
-            "Content-Type": "application/json"
-        }
+    # def evaluate_user_response(self, user_message):
+    #     is_helpful = any(keyword in user_message.lower() for keyword in ["help", "assist", "guide"])
+    #     score = 1 if is_helpful else 0
+    #     evaluation = f"Response Evaluation - Score: {score}"
+    #     logging.info(evaluation)
+    #     return evaluation
 
-        data = {
-            "model": "gpt-3.5-turbo",
-            "messages": self.conversation_state["messages"]
-        }
-
-        try:
-            response = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, data=json.dumps(data))
-
-            if response.status_code != 200:
-                logging.error(f"API call failed with status code {response.status_code} and message: {response.text}")
-                return "Sorry, I encountered an error with the API call."
-
-            response_data = response.json()
-
-            if "choices" not in response_data or not response_data["choices"]:
-                logging.error("No 'choices' field in the API response.")
-                return "Sorry, I encountered an error with the response format."
-
-            bot_message = response_data["choices"][0]["message"]["content"]
-            if not bot_message.strip():
-                logging.info("Received empty response from API")
-                return "I'm not sure how to respond to that. Could you clarify or ask something else?"
-
-            return bot_message
-
-        except Exception as e:
-            logging.error(f"Error in calling OpenAI API: {e}")
-            return "Sorry, I encountered an error. Could you repeat that?"
-
-    def evaluate_user_response(self, user_message):
-        is_helpful = any(keyword in user_message.lower() for keyword in ["help", "assist", "guide"])
-        score = 1 if is_helpful else 0
-        evaluation = f"Response Evaluation - Score: {score}"
-        logging.info(evaluation)
-        return evaluation
     def is_end_goal_achieved(self):
-        return self.conversation_state["end_goal_achieved"] or self.conversation_state["user_quit"]
-
-
-    def update_conversation_state(self, role, message):
-        # Keep the role as 'customer', don't change it to 'customer'
-        formatted_message = f"{role.title()}: {message}"
-        self.conversation_state["messages"].append({"role": role, "content": message})
-        log_in_background(formatted_message)
-
-        if self.goal in message.lower():
-            self.conversation_state["end_goal_achieved"] = True
-        if message.lower() == "quit":
-            self.conversation_state["user_quit"] = True
-
+        return (
+            self.conversation_state["end_goal_achieved"]
+            or self.conversation_state["user_quit"]
+        )
 
     def generate_dynamic_question(self, last_user_message):
         # Prepare the prompt for the API call
@@ -210,26 +275,3 @@ class ConversationBot:
         # Create a conversation context for the API
         context = f"Akhil is a college student interested in Vodafone services. He's inquiring about them. Last message from Akhil: '{last_user_message}'\nResponse as Akhil:"
         return context
-
-
-
-def run(self):
-        initial_bot_message = f"Akhil: {self.initial_question}"
-        print(initial_bot_message)
-        self.update_conversation_state("customer", json.dumps(bot_persona))
-        self.update_conversation_state("customer", self.initial_question)
-
-        while not self.is_end_goal_achieved():
-            user_input = input("User: ")
-            self.update_conversation_state("customer", user_input)
-
-            personal_info_response = self.handle_personal_info_request(user_input)
-            if personal_info_response and self.is_response_in_character(personal_info_response):
-                print("Akhil:", personal_info_response)
-                self.update_conversation_state("customer", personal_info_response)
-                continue
-
-            last_user_message = self.conversation_state["messages"][-1]["content"]
-            in_character_response = self.generate_response(last_user_message)
-            print("Akhil:", in_character_response)
-            self.update_conversation_state("customer", in_character_response)
