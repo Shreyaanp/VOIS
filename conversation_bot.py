@@ -66,6 +66,7 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",
+            "max_tokens": 40,
             "messages": [
                 {"role": "system", "content": json.dumps(bot_persona)},
                 {
@@ -77,7 +78,7 @@ class ConversationBot:
                         "For instance, responses like 'as an AI assistant, I cannot help you with...' are not appropriate in this scenario. "
                         "Stay in character and direct the conversation towards Vodafone-related topics. If a question is not relevant to our services or your role, kindly inform the user that it is beyond the scope of this discussion."
                          "Throughout this interaction, maintain the customer's perspective. Your responses should consistently reflect the customer's viewpoint and interests in Vodafone services. "
-                        "Keep the conversation focused on the customer's needs and questions regarding Vodafone."
+                        "Keep the conversation focused on the customer's needs and questions regarding Vodafone. Also when attempting to answer a question, try to provide a response that is relevant to the customer's interests and needs. and keep in mind what the last conversation is about"
                         "you dont need to say thankyou everytime, just say it once at the end of the conversation."
                         "you can say quit to end the conversation"
                         "your goal is to acquire sim card and also get information about vodafone services. once you acquire the sim card, you can end the conversation by saying quit."
@@ -182,7 +183,8 @@ class ConversationBot:
         }
 
         data = {
-            "model": "gpt-3.5-turbo",  # Or another suitable model for chat-based responses
+            "model": "gpt-3.5-turbo",
+            "max_tokens": 70,   # Or another suitable model for chat-based responses
             "messages": [
                 {"role": "system", "content": "Provide a relevant conversation context here."},
                 {"role": "user", "content": prompt}
@@ -213,6 +215,7 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",
+             "max_tokens": 70,
             "messages": [
                 {"role": "system", "content": "Provide a relevant conversation context here."},
                 {"role": "user", "content": prompt}

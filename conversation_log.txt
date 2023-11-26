@@ -1201,3 +1201,494 @@
 2023-11-26 02:52:57,729 - Error in OpenAI API call: API call failed with status code 429
 2023-11-26 02:52:57,729 - General error in is_related_to_vodafone_services: API call failed with status code 429
 2023-11-26 02:52:57,731 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 03:17:11,607 - User: Blah blah blah blah.
+2023-11-26 03:17:12,110 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:12,579 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:12,579 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:12,579 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:17:13,059 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:13,059 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:13,059 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:17:13,538 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:14,030 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:14,030 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:14,030 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:17:14,500 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:14,500 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:14,500 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:17:14,978 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:15,459 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:15,459 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:15,460 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:17:16,049 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:17:16,049 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:17:16,049 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:17:16,050 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 03:18:17,263 - User: Da da da da.
+2023-11-26 03:18:18,500 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:19,460 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:19,461 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:19,461 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:18:20,657 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:20,657 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:20,657 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:18:21,219 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:21,701 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:21,701 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:21,701 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:18:22,180 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:22,180 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:22,180 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:18:22,979 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:23,460 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:23,460 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:23,460 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:18:23,939 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:23,939 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:23,939 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:18:23,940 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 03:18:57,554 - User: Dada, Dada.
+2023-11-26 03:18:58,019 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:58,502 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:58,502 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:58,502 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:18:58,980 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:58,980 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:58,980 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:18:59,459 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:59,940 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:18:59,940 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:18:59,940 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:19:00,421 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:00,422 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:00,422 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:19:00,899 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:01,384 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:01,384 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:01,384 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:19:01,859 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:01,860 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:01,860 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:19:01,861 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 03:19:22,120 - User: Dark.
+2023-11-26 03:19:22,662 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:23,140 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:23,140 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:23,140 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:19:23,620 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:23,621 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:23,621 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:19:24,085 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:24,483 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:24,483 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:24,483 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:19:25,061 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:25,062 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:25,062 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:19:25,543 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:26,010 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:26,010 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:26,010 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 03:19:26,508 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 03:19:26,508 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 03:19:26,508 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 03:19:26,509 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 14:48:55,214 - User: Hello welcome to Vodafone service station. How may I help you?
+2023-11-26 14:48:55,793 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:56,322 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:56,323 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:48:56,323 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 14:48:56,802 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:56,802 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:48:56,802 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 14:48:57,291 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:57,756 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:57,756 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:48:57,756 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 14:48:58,494 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:58,494 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:48:58,494 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 14:48:59,029 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:59,570 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:48:59,570 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:48:59,570 - General error in is_response_in_character: API call failed with status code 429
+2023-11-26 14:49:00,146 - API call failed with status code 429 and message: {
+    "error": {
+        "message": "You exceeded your current quota, please check your plan and billing details.",
+        "type": "insufficient_quota",
+        "param": null,
+        "code": "insufficient_quota"
+    }
+}
+
+2023-11-26 14:49:00,146 - Error in OpenAI API call: API call failed with status code 429
+2023-11-26 14:49:00,146 - General error in is_related_to_vodafone_services: API call failed with status code 429
+2023-11-26 14:49:00,147 - System: I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?
+2023-11-26 14:50:34,491 - User: Hello how may I help you today?
+2023-11-26 14:50:37,692 - System: Hi there! I'm interested in getting a Vodafone SIM card. Can you please tell me more about the services that Vodafone provides? What are the different plans and options available?
+2023-11-26 15:20:58,425 - User: Hello welcome to Vodafone service station. How may I help you?
+2023-11-26 15:21:03,577 - System: Hi there! I'm Akhil, a college student looking to acquire a Vodafone SIM card. I'd love to learn more about the services Vodafone provides. Can you help me with that?
+2023-11-26 15:21:22,541 - User: Yeah, sure. I can help you with that. What type of Vodafone services do you want to explore today?
+2023-11-26 15:21:28,789 - System: Thank you for helping me out. As a college student, I am looking for a Vodafone plan that suits my needs. I am interested in knowing about the different plans available, such as prepaid or postpaid, along with their features and pricing. It would also be great to learn about any special offers or benefits that Vodafone provides for students like me. Could you provide some information and suggestions regarding this?
+2023-11-26 15:22:54,171 - User: Hello welcome to Vodafone service station. How may I help you today?
+2023-11-26 15:22:57,051 - System: Hi! I'm Akhil, and I'm interested in acquiring a Vodafone SIM card. Could you please provide me with information about the services that Vodafone offers?
+2023-11-26 15:23:21,358 - User: OK, sure. If you're interested in acquiring Vodafone SIM card, you need to know that there's two methods. First is getting it to your house and the other one is going to a shop and buying it. What would you like?
+2023-11-26 15:23:24,907 - System: Thank you for the information. I think it would be more convenient for me to get the Vodafone SIM card delivered to my house. Can you please explain the process for getting it delivered to my address
+2023-11-26 15:23:55,792 - User: Show The process for getting it to deliver to your house is first you go to vodafone.com, then you enter your details. Wait for the OTP to arrive. After the OTP arrives, then you will have to pay \u20b9150 online. We have many methods and then we wait for the SIM to arrive.
+2023-11-26 15:24:03,237 - System: I am a college student and I would like to know more about the services that Vodafone offers. Specifically, I am looking for a plan that suits my needs and budget. Can you please provide some
+2023-11-26 15:24:23,338 - User: Sure. Would you not like to get this SIM card and then start?
+2023-11-26 15:24:26,490 - System: Yes, that sounds like a good idea. I apologize for the confusion earlier. I would like to proceed with acquiring the Vodafone SIM card. Could you please guide me through the process?
+2023-11-26 15:24:49,018 - User: I have told earlier the woodby arrived and then you have to pay \u20b9150. They have made methods which which which you can pay.
+2023-11-26 15:24:54,342 - System: Hi there! I'm Akhil, a college student looking for information about Vodafone services. I'm interested in getting a Vodafone SIM card and would like to know more about the services you offer
