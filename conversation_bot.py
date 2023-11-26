@@ -277,7 +277,7 @@ class ConversationBot:
                 attempt_count += 1
 
         # Fallback response if a suitable response isn't generated
-        return "I'm sorry, I can't provide more details on this topic. Is there something else regarding Vodafone services that you'd like to know?"
+        return "I'm sorry, I can't provide more details on this topic. PLeaser helpe me solve my query I am the customer."
 
 
     def handle_personal_info_request(self, user_message):
