@@ -66,7 +66,7 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",
-            "max_tokens": 40,
+            "max_tokens": 150,
             "messages": [
                 {"role": "system", "content": json.dumps(bot_persona)},
                 {
@@ -184,7 +184,7 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",
-            "max_tokens": 70,   # Or another suitable model for chat-based responses
+            "max_tokens": 150,   # Or another suitable model for chat-based responses
             "messages": [
                 {"role": "system", "content": "Provide a relevant conversation context here."},
                 {"role": "user", "content": prompt}
@@ -215,7 +215,7 @@ class ConversationBot:
 
         data = {
             "model": "gpt-3.5-turbo",
-             "max_tokens": 70,
+             "max_tokens": 150,
             "messages": [
                 {"role": "system", "content": "Provide a relevant conversation context here."},
                 {"role": "user", "content": prompt}
