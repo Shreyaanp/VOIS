@@ -47,7 +47,7 @@ class ConversationBot:
 
     def __init__(self):
         self.initial_question = (
-            "ask on how to acquire sim cards, plans, budget options, coverage areas, and more. one at a time. about vodafone"
+            "ask on how to acquire sim cards, plans, budget options, coverage areas, and more. one at a time. It should be a conversation starter. your gola is to acquire vodafone sim card."
         )
         # rest of the initial question
         self.goal = "acquire vodafone simcard"
@@ -239,31 +239,25 @@ class ConversationBot:
             logging.error(f"Error in OpenAI API call: {e}")
             raise
 
-
     def run(self):
         initial_bot_message = f"Akhil: {self.initial_question}"
         print(initial_bot_message)
-        self.update_conversation_state("assistant", json.dumps(bot_persona))
-        self.update_conversation_state("assistant", self.initial_question)
+        self.update_conversation_state("system", json.dumps(bot_persona))
+        self.update_conversation_state("system", self.initial_question)
 
         while not self.is_end_goal_achieved():
             user_input = input("User: ")
             self.update_conversation_state("user", user_input)
-
-            personal_info_response = self.handle_personal_info_request(user_input)
-            if personal_info_response:
-                print("Akhil:", personal_info_response)
-                self.update_conversation_state("system", personal_info_response)
-                continue
 
             last_user_message = self.conversation_state["messages"][-1]["content"]
             in_character_response = self.generate_response(last_user_message)
             if not self.is_related_to_vodafone_services(in_character_response):
                 in_character_response = "I'm sorry, I don't know the answer to that."
             self.update_conversation_state("system", in_character_response)
+
     def generate_response(self, last_user_message):
         attempt_count = 0
-        max_attempts = 3  # Limit the number of attempts to prevent infinite loops
+        max_attempts = 2  # Limit the number of attempts to prevent infinite loops
 
         while attempt_count < max_attempts:
             dynamic_response = self.generate_dynamic_question(last_user_message)
@@ -299,11 +293,44 @@ class ConversationBot:
     #     logging.info(evaluation)
     #     return evaluation
 
-    def is_end_goal_achieved(self):
-        return (
-            self.conversation_state["end_goal_achieved"]
-            or self.conversation_state["user_quit"]
-        )
+    # def is_end_goal_achieved(self):
+    #     # Check if user has quit the conversation
+    #     if self.conversation_state["user_quit"]:
+    #         return True
+
+    #     # Prepare the prompt to check if the goal is achieved
+    #     conversation_summary = " ".join([msg["content"] for msg in self.conversation_state["messages"]])
+    #     prompt_text = f"Based on the following conversation, has the goal of '{self.goal}' been achieved?\n\n{conversation_summary}"
+
+    #     headers = {
+    #         "Authorization": f"Bearer {openai.api_key}",
+    #         "Content-Type": "application/json",
+    #     }
+
+    #     data = {
+    #         "model": "text-davinci-003",  # Or another suitable model
+    #         "prompt": prompt_text,
+    #         "max_tokens": 50
+    #     }
+
+    #     try:
+    #         response = requests.post(
+    #             "https://api.openai.com/v1/completions",  # General completions endpoint
+    #             headers=headers,
+    #             json=data
+    #         )
+    #         if response.status_code != 200:
+    #             logging.error(f"API call failed with status code {response.status_code} and message: {response.text}")
+    #             return False
+
+    #         response_data = response.json()
+    #         goal_achieved_response = response_data["choices"][0]["text"].strip().lower()
+    #         return "yes" in goal_achieved_response or "achieved" in goal_achieved_response
+
+    #     except Exception as e:
+    #         logging.error(f"Error in OpenAI API call: {e}")
+    #         return False
+
 
     def generate_dynamic_question(self, last_user_message):
         # Prepare the prompt for the API call
@@ -314,6 +341,14 @@ class ConversationBot:
         return response
 
     def prepare_prompt(self, last_user_message):
-        # Create a conversation context for the API
-        context = f"Akhil is a college student interested in Vodafone services. His Goal is to acquire vodafone sim card. He's inquiring about the services vodafone provides and figuring out the most suitable service for him. But need the service agents input to get the information and opinion. Last message from Akhil: '{last_user_message}'\nResponse as Akhil:"
+        conversation_history = " ".join([f"{msg['role'].title()}: {msg['content']}" for msg in self.conversation_state["messages"]])
+
+        context = (
+            f"Conversation History:\n{conversation_history}\n\n"
+            f"Akhil is a college student interested in Vodafone services. His goal is to acquire a Vodafone sim card. "
+            f"He's inquiring about the services Vodafone provides and figuring out the most suitable service for him, but needs the service agent's input to get the information and opinion.\n\n"
+            f"Last message from Akhil: '{last_user_message}'\n"
+            f"Response as Akhil:"
+        )
         return context
+

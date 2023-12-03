@@ -46,12 +46,8 @@ async def user_message(input: UserInput):
     user_message = input.user_message  # Extract the user message
     bot.update_conversation_state("user", user_message)
 
-    # Handle personal info requests directly or generate a response
-    personal_info_response = bot.handle_personal_info_request(user_message)
-    if personal_info_response:
-        bot_response = personal_info_response
-    else:
-        bot_response = bot.generate_response(user_message)  # Generate response using the new method
+
+    bot_response = bot.generate_response(user_message)  # Generate response using the new method
 
     bot.update_conversation_state("system", bot_response)
     return {"bot_response": bot_response}
